@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn{
+    @apply bg-c-secondary px-9 py-3 rounded-md hover:opacity-80 ease-in-out duration-200;
+}
+
+.card_btn {
+    @apply w-full px-9 py-3 bg-c-primary-dark rounded-md capitalize font-bold hover:bg-c-secondary ease-in duration-200;
+}
+
+.title{
+    @apply font-bold leading-snug capitalize text-xl md:text-3xl ;
+}
+
+.blob{
+    @apply w-72 h-72 bg-c-blob rounded-full absolute blur-3xl opacity-25 -left-5;
+}
+
+.secondary{
+    @apply w-72 h-72 bg-c-secondary rounded-full absolute blur-3xl opacity-25 bottom-0 right-4;
+}
+
+.user-text{
+    display: none;
+}
+.user-text.active-text{
+    display: block;
+    animation: moveUp linear forwards;
+    transition: all 0.3s ease;
+}
+
+.user-pic{
+    transition:  all 0.3s ease;
+}
+
+.user-pic.active-pic{
+    border: 2px solid #ff7d3b;
+}
+
+@keyframes moveUp {
+    0%{
+        margin-top: 100px;
+        opacity: 0;
+    }
+    50%{
+        margin-top: 50px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+
+
+.card{
+    perspective: 1000px;
+}
+.front,
+.back{
+    backface-visibility: hidden;
+    transition: all 0.4 ease;
+}
+
+.front {
+    overflow:  hidden;
+}
+
